@@ -1,6 +1,6 @@
 > Problem Statement
 
-You are given an integer array nums sorted in non-decreasing order.
+You are given an integer array nums sorted in non-decreasing order eg: [1, 1, 2, 2, 3, 3].
 
 Your task is to:
 
