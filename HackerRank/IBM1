@@ -16,17 +16,17 @@ When the decorated function is called, the decorator should:
 
 execution_time = []
 
-def timeit(func):
+def timeit(func):             #func represents the function being decorated.
 
     def wrapper(*args, **kwargs):
 
-        start = time.time()
+        start = time.time()     #Records current time before function execution.
 
-        result = func(*args, **kwargs)
+        result = func(*args, **kwargs)      #They allow the decorator to work with any function.
 
         end = time.time()
 
-        execution_time.append(round((end - start) * 1000))
+        execution_time.append(((end - start) * 1000))
 
         return result
 
