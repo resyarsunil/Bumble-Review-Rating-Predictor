@@ -1,0 +1,30 @@
+Priblem Statement: You are at the chemistry lab performing the lodine Clock Experiment. You have been given a stop watch in which the time is in /hh:mm:ss format, the hour is represented in 24-hour format. The clock starts at 00:00:00 and ends at 23:59:59. However at times, the displag of the stop watch is incorrect that one of the characters of the time at any point of time remains blank. That is, assume that the actual time that has elapsed be 18:25:48 but on the stop watch this might be displayed 10: 5:48. Here, the number 2 in the minutes is not getting displayed properly. And, the possible values that can be placed in this position are 8, 1, 2 3.4 and 5. Placing these values in the input, we find the minimum possible time would be 10:05:48 and the maximum possible time would be 10:55:48
+
+Your task is to find out the possible values that the biank may take, and also display the maximum and minimum values.
+
+Solution:
+
+def check_if_valid(t):
+    try:
+        h,m,s = map(int, t.split(":"))
+        return 0 <= h <=23 and 0 <= m <= 59 and 0 <=s <=59
+    except:
+        return False
+    
+def find_possible_values(time):
+    possible_values = []
+    possible_digits = []
+    
+    for i in range(6):
+        candidate = time.replace("-", str(i))
+        
+        if check_if_valid(candidate):
+            possible_values.append(candidate)
+            possible_digits.append(i)
+            
+    return {
+    "possible_values": possible_values,
+    "possible_digits": possible_digits,
+    "min_time": min(possible_values),
+    "max_time": max(possible_values)
+}

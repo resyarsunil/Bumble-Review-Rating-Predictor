@@ -1,0 +1,46 @@
+- In Python, a decorator wraps another function to add extra behavior without changing the original function’s code.
+
+> 
+
+Implement a Python decorator called timeit that measures the execution time of a function. The decorator takes a single argument, func, which is the function to be timed.
+
+When the decorated function is called, the decorator should:
+
+- Measure the execution time in milliseconds
+- Push the execution time to a list called execution_time (already declared in the global scope)
+- Return the same value that the original function would return
+
+>
+ code:
+
+
+execution_time = []
+
+def timeit(func):             #func represents the function being decorated.
+
+    def wrapper(*args, **kwargs):
+
+        start = time.time()     #Records current time before function execution.
+
+        result = func(*args, **kwargs)      #They allow the decorator to work with any function.
+
+        end = time.time()
+
+        execution_time.append(((end - start) * 1000))
+
+        return result
+
+    return wrapper
+
+
+ >
+
+Example:
+@timeit
+def test():
+    time.sleep(1)
+    return "Done"
+
+
+print(test())
+print(execution_time)

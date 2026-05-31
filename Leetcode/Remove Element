@@ -1,0 +1,18 @@
+> Problem statement: 
+Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
+
+The order of elements may be changed. After removing the elements, return the number of elements k that are not equal to val.
+
+The first k elements of nums should contain the elements not equal to val. The remaining elements are not important.
+
+> class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0  # pointer for position of next valid element
+        
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        
+        return k
+        

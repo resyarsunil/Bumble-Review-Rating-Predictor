@@ -1,0 +1,22 @@
+> Problem statement: You are given an array of characters letters that is sorted in non-decreasing order, and a character target. There are at least two different characters in letters.
+
+Return the smallest character in letters that is lexicographically greater than target. If such a character does not exist, return the first character in letters.
+Letters are compared based on their position in the alphabet:
+
+lexicographically greater means:
+
+a < b < c < d < ... < z
+
+So,
+
+'b' is lexicographically greater than 'a'
+
+'z' is lexicographically greater than 'x'
+
+> class Solution:
+    def nextGreatestLetter(self, l: List[str], t: str) -> str:
+        a=ord(t)
+        for i in range(len(l)):
+            if ord(l[i])>a:
+                return l[i]
+        return l[0]
