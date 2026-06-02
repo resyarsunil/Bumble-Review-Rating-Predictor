@@ -1,0 +1,23 @@
+Question: Find the Runner-Up Score
+
+Given the participants' scores in a competition, find the runner-up score. The runner-up score is the second highest distinct score.
+
+Input Format
+The first line contains an integer n, the number of scores.
+The second line contains n space-separated integers representing the scores.
+Constraints
+2 ≤ n ≤ 10
+Scores can be positive or negative integers.
+
+> Solution:
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    
+    ar = list(set(arr))
+    
+    ar.sort(reverse=True)
+        
+        
+    print(ar[1])
