@@ -1,0 +1,39 @@
+> You have a record of N students. Each record contains a student's name followed by their marks in 3 subjects.
+
+Store the data in a dictionary where:
+
+{name: [marks]}
+
+After storing all records, read the name of a student (query_name) and print the average marks of that student, formatted to 2 decimal places.
+
+Input Format
+The first line contains an integer N, the number of students.
+The next N lines contain a student's name followed by three marks separated by spaces.
+The last line contains query_name, the name of the student whose average score needs to be calculated.
+Example Input
+
+3
+Krishna 67 68 69
+Arjun 70 98 63
+Malika 52 56 60
+Malika
+
+Output
+56.00
+
+> Solution:
+
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    total_score = sum(student_marks[query_name])
+    
+    avg = total_score/len(student_marks[query_name])
+    
+    print(f"{avg:.2f}")
