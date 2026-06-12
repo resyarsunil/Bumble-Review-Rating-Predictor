@@ -1,0 +1,46 @@
+>PROBLEM
+Input Format
+
+A single line containing the thickness value for the logo.
+
+Constraints
+
+The thickness must be an odd number.
+
+Output Format
+
+Output the desired logo.
+
+>SOLUTION
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+c = "H"
+
+threshold = int(input())
+
+#For cap
+for i in range(threshold):
+    print((c*i).rjust(threshold-1) + c + (c*i).ljust(threshold-1))
+    
+    
+# For pillars
+
+for i in range(threshold+1):
+    print((c*threshold).center(2*threshold) + 
+          (c*threshold).center(6*threshold))
+          
+# For horizontal belt
+
+for i in range((threshold+1)//2):
+    print((c*(threshold*5)).center(threshold*6))
+    
+for i in range(threshold+1):
+    print((c*threshold).center(2*threshold) + 
+          (c*threshold).center(6*threshold))
+          
+#for cap
+
+for i in range(threshold):
+        print(((c*(threshold-i-1)).rjust(threshold) + c + (c*(threshold-i-1)).ljust(threshold)).rjust(threshold*6))
+
