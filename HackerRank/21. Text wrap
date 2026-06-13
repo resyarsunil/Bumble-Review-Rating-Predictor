@@ -1,0 +1,37 @@
+Wrap the text in a given width
+
+>PROBLEM
+
+You are given a string string and an integer max_width.
+
+Your task is to wrap the string into a paragraph of width max_width.
+
+Sample Input:
+ABCDEFGHIJKLIMNOQRSTUVWXYZ
+4
+Sample Output:
+ABCD
+EFGH
+IJKL
+IMNO
+QRST
+UVWX
+YZ
+
+>SOLUTION
+
+import textwrap
+
+def wrap(string, max_width):
+    
+        
+    wp = textwrap.wrap(string,width=max_width)
+        
+    return "\n".join(wp)
+        
+    
+
+if __name__ == '__main__':
+    string, max_width = input(), int(input())
+    result = wrap(string, max_width)
+    print(result)
