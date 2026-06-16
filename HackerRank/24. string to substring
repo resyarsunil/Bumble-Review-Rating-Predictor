@@ -1,0 +1,82 @@
+> PROBLEM:
+
+You are given:
+
+A string s.
+An integer k, where the length of s is divisible by k.
+Task
+Divide the string into equal-sized substrings of length k.
+For each substring:
+Remove duplicate characters.
+Keep only the first occurrence of each character.
+Preserve the original order of characters.
+Print the resulting string for each substring on a new line.
+Example
+Input
+s = AABCAAADA
+k = 3
+Step 1: Split into substrings
+AAB
+CAA
+ADA
+Step 2: Remove duplicates from each substring
+
+Substring 1
+
+AAB
+A → keep
+A → duplicate, ignore
+B → keep
+
+Result:
+
+AB
+
+Substring 2
+
+CAA
+C → keep
+A → keep
+A → duplicate, ignore
+
+Result:
+
+CA
+
+Substring 3
+
+ADA
+A → keep
+D → keep
+A → duplicate, ignore
+
+Result:
+
+AD
+Output
+AB
+CA
+AD
+
+> SOLUTION:
+
+def merge_the_tools(string, k):
+   
+   n = len(string)
+
+   
+   for i in range(0,n,k):
+       t= string[i:i+k]
+       result=""
+       
+       for ch in t:
+        if ch not in result:
+            result += ch
+       
+       print(result)
+       
+        
+      
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
