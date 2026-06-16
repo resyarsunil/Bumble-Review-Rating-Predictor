@@ -1,0 +1,99 @@
+> PROBLEM:
+
+
+The Minion Game
+
+Kevin and Stuart want to play the 'The Minion Game'.
+
+Game Rules
+Both players are given the same string, string.
+Both players have to make substrings using the letters of the string.
+Stuart has to make words starting with consonants.
+Kevin has to make words starting with vowels (A, E, I, O, U).
+The game ends when both players have made all possible substrings.
+Scoring
+A player gets 1 point for each occurrence of the substring in the original string.
+
+For example:
+
+String = BANANA
+
+Possible substrings are:
+
+B
+BA
+BAN
+BANA
+BANAN
+BANANA
+
+A
+AN
+ANA
+ANAN
+ANANA
+
+N
+NA
+NAN
+NANA
+
+A
+AN
+ANA
+
+N
+NA
+
+A
+
+Kevin receives points for substrings that start with a vowel.
+
+Stuart receives points for substrings that start with a consonant.
+
+Task
+
+Complete the function minion_game.
+
+The function should print one of the following:
+
+Kevin <score>
+
+or
+
+Stuart <score>
+
+or
+
+Draw
+
+if both players have the same score.
+
+
+> SOLUTION:
+
+def minion_game(string):
+    
+    vowels={'A','E','I','O','U'}
+    Stuart = 0
+    Kevin = 0
+    n = len(string)
+    
+    for i in range(n):
+        if string[i] in vowels:
+            Kevin += n-i
+            
+        else:
+            Stuart += n-i
+            
+    if Kevin > Stuart:
+        print("Kevin",Kevin)
+    elif Stuart > Kevin:
+        print("Stuart",Stuart)
+    else:
+        print("Draw")
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
