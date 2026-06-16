@@ -1,0 +1,43 @@
+> PROBLEM:
+
+You are asked to ensure that the first and last names of people begin with a capital letter in their passports. 
+
+Sample Input: chris alan
+Sample Output: Chris Alan
+
+> SOLUTION
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    
+    s= list(s)
+    
+    if s and s[0].isalpha():
+        s[0]= s[0].upper()
+        
+    for i in range(1,len(s)):
+        if s[i-1]==' ' and s[i].isalpha():
+            s[i]= s[i].upper()
+            
+    return ''.join(s)
+  
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
