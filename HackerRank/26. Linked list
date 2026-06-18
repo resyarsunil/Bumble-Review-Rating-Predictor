@@ -1,0 +1,35 @@
+>PROBLEM:
+
+You are given the head of a singly linked list. Your task is to reverse the linked list and return the head of the reversed list.
+
+A singly linked list contains nodes where each node has:
+
+data: the value stored in the node.
+next: a pointer to the next node.
+
+You must reverse the links between the nodes without creating a new linked list.
+
+Example
+Input
+1 → 2 → 3 → 4 → 5 → NULL
+Output
+5 → 4 → 3 → 2 → 1 → NULL
+
+>SOLUTION:
+
+def reverse(llist):
+
+    prev = None
+    current = llist
+
+    while current is not None:
+
+        next_node = current.next
+
+        current.next = prev
+
+        prev = current
+
+        current = next_node
+
+    return prev
