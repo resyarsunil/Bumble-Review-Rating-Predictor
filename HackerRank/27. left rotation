@@ -1,0 +1,32 @@
+> PROBLEM:
+
+A left rotation operation on an array shifts each of the array's elements one unit to the left. For example, if two left rotations are performed on the array [1, 2, 3, 4, 5], the array becomes [3, 4, 5, 1, 2].
+
+Given an array of integers and a number of left rotations, determine the resulting array after performing all the rotations.
+
+>SOLUTION:
+
+def rotateLeft(d, arr):
+    
+    return arr[d:]+arr[:d]
+    
+    
+        
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    first_multiple_input = input().rstrip().split()
+
+    n = int(first_multiple_input[0])
+
+    d = int(first_multiple_input[1])
+
+    arr = list(map(int, input().rstrip().split()))
+
+    result = rotateLeft(d, arr)
+
+    fptr.write(' '.join(map(str, result)))
+    fptr.write('\n')
+
+    fptr.close()
