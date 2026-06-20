@@ -1,0 +1,17 @@
+SET IS AN UNORDERED COLLECTION OF ELEMENTS WITHOUT DUPLICATE VALUES
+
+>PROBLEM: 
+TASK IS TO FIND AVERAGE OF DISTINCT VALUES
+
+>SOLUTION:
+
+def average(array):
+    array = set(array)
+    AVG = sum(array) / len(array)
+    return AVG  
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = list(map(int, input().split()))
+    result = average(arr)
+    print(result)
