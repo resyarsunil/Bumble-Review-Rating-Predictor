@@ -1,0 +1,23 @@
+Errors detected during execution are called exceptions.
+
+The statements try and except can be used to handle selected exceptions.
+
+> PROBLEM:
+You are given an integer, N. Your task is to read N lines of input. Each line contains two space-separated values, a and b. FIND A/B
+
+>SOLUTION:
+
+n = int(input())
+
+
+for _ in range(n):
+    try:
+        a,b= map(int,input().split())
+        print(a//b)
+         
+    except ZeroDivisionError as e:
+        print("Error Code:",e)
+        
+    except ValueError as e:
+        print("Error Code:",e)
+    
