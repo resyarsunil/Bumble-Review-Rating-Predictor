@@ -1,0 +1,35 @@
+> remove(): It removes the element x from the set. it x is not present in set, it returns a key error. The .remove(x) operation returns None.
+> discard(): It removes the element x from the set. it x is not present in set, it does not returns a key error, but returns none
+> pop(): removes an arbitrary element from set, if there is no element in set, it returns key error
+
+> PROBLEM:
+You have a non-empty set S, and you have to execute N  commands given in  N lines.
+The commands will be pop, remove and discard.
+
+The first line contains integer n , the number of elements in the set s .
+The second line contains n space separated elements of set s . All of the elements are non-negative integers, less than or equal to 9.
+The third line contains integer N , the number of commands.
+The next  lines contains either pop, remove and/or discard commands followed by their associated value.
+
+> SOLUTION: 
+n = int(input())
+s = set(map(int, input().split()))
+
+N = int(input())
+
+
+for _ in range(N):
+    commands = input().split()
+
+    if commands[0]=="pop":
+        s.pop()
+    elif commands[0]=="remove":
+        try:
+            s.remove(int(commands[1]))
+        except KeyError:
+            pass
+            
+    else: 
+        s.discard(int(commands[1]))
+            
+print(sum(s))
