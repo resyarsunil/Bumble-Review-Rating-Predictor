@@ -1,0 +1,12 @@
+>PROBLEM:
+The first line contains an integer N, the total number of country stamps.
+The next  N lines contains the name of the country where the stamp is from.
+Output the total number of distinct country stamps on a single line.
+
+>SOLUTION:
+n= int(input())
+con = set()
+
+for _ in range(n):
+    con.add(input())
+print(len(con))
