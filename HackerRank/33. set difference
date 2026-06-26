@@ -1,0 +1,16 @@
+> PROBLEM:
+
+The first line contains the number of students who have subscribed to the English newspaper.
+The second line contains the space separated list of student roll numbers who have subscribed to the English newspaper.
+The third line contains the number of students who have subscribed to the French newspaper.
+The fourth line contains the space separated list of student roll numbers who have subscribed to the French newspaper.
+Output the total number of students who are subscribed to the English newspaper only.
+
+> SOLUTION:
+
+n = int(input())
+e = set(map(int,input().split()))
+s = int(input())
+f = set(map(int,input().split()))
+diff = e.difference(f)
+print(len(diff))
