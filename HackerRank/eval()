@@ -1,0 +1,12 @@
+eval() is used to evaluate a expression in python
+
+> PROBLEM:
+You are given a polynomial P(x) of a single variable x.
+
+Your task is to verify if the value of the polynomial at x is equal to the given integer k.
+
+> SOLUTION:
+
+x,k =map(int,input().split())
+p = input()
+print(eval(p)==k)
