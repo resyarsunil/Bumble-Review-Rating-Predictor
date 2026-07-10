@@ -1,0 +1,4 @@
+,Accuracy,F1 Macro,F1 Weighted,Precision Macro,Recall Macro
+Logistic Regression,0.5312,0.4211,0.497,0.442,0.4357
+Random Forest,0.5031,0.3781,0.4573,0.4014,0.4014
+SVM (Linear),0.5291,0.3935,0.4774,0.4355,0.4212
