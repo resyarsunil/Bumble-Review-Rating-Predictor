@@ -1,0 +1,5 @@
+,Baseline,Baseline,Baseline,Baseline,Baseline,Tuned,Tuned,Tuned,Tuned,Tuned,Improvement,Improvement,Improvement,Improvement,Improvement
+,Accuracy,F1 Macro,F1 Weighted,Precision Macro,Recall Macro,Accuracy,F1 Macro,F1 Weighted,Precision Macro,Recall Macro,Accuracy,F1 Macro,F1 Weighted,Precision Macro,Recall Macro
+Logistic Regression,0.45,0.4434,0.4434,0.4406,0.45,0.4501,0.4435,0.4435,0.4408,0.4501,0.0001,0.0001,0.0001,0.0002,0.0001
+Random Forest,0.4222,0.4145,0.4145,0.412,0.4222,0.4237,0.4154,0.4154,0.4128,0.4237,0.0015,0.0009,0.0009,0.0008,0.0015
+SVM (Linear),0.4468,0.4325,0.4325,0.4317,0.4468,0.4481,0.4335,0.4335,0.4329,0.4481,0.0013,0.001,0.001,0.0012,0.0013
