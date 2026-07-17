@@ -1,0 +1,3 @@
+The dataset contains 178573 rows and, 11 columns. Among them, 10000 is uploaded in here. 
+The processes data sample is saved as review_dataset2.
+
