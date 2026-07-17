@@ -1,6 +1,6 @@
 import streamlit as st
 import joblib
-from preprocess import preprocess
+from Automated_Review_System.Imbalanced_data.imbalanced_UI.preprocess import preprocess
 
 # -----------------------
 # Load Saved Models
