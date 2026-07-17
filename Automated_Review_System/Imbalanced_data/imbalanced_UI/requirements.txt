@@ -1,6 +1,7 @@
 streamlit
 pandas
 numpy
+re
 scikit-learn
 spacy
 joblib
