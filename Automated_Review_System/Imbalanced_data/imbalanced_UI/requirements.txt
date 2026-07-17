@@ -5,3 +5,5 @@ re
 scikit-learn
 spacy
 joblib
+
+While running, enter into the folder containg the UI information (imbalanced_UI). Then run "streamlit run app.py".
