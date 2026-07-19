@@ -1,4 +1,4 @@
-                                                                                  Bumble Review Rating Predictor
+                                                                Bumble Review Rating Predictor
 Running the Streamlit Application
 - Open a terminal and navigate to the project repository.
   
